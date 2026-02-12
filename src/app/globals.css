@@ -115,11 +115,38 @@
   --sidebar-ring: oklch(0.556 0 0);
 }
 
+/* ——— Base ——— */
 @layer base {
   * {
     @apply border-border outline-ring/50;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
+
+  ::selection {
+    background: rgba(255, 255, 255, 0.2);
+    color: inherit;
+  }
+
   body {
     @apply bg-background text-foreground;
+    overflow-x: hidden;
+  }
+}
+
+/* ——— Typography ——— */
+.font-alphabet {
+  font-family: "Alphabet", var(--font-geist-sans), sans-serif;
+}
+
+.font-termina {
+  font-family: "Termina", var(--font-geist-sans), sans-serif;
+  font-weight: 900;
+}
+
+/* ——— Utilities ——— */
+.desktop-only {
+  @media (max-width: 1023px) {
+    display: none !important;
   }
 }
