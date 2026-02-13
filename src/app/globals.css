@@ -151,3 +151,13 @@
   }
 }
 
+/* ——— Story Section ——— */
+.story-card {
+  background-color: #d4ff00;
+  color: #000;
+}
+
+.media {
+  will-change: clip-path, transform;
+}
+
