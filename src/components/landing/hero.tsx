@@ -97,7 +97,7 @@ export default function Hero() {
         </div>
 
         <p className="uppercase font-alphabet text-[11px] lg:text-[14px] text-center items-center">
-          Copyright 2026 Lisboon. All rights reserved.
+          Copyright 2026 Apollo Filmes. All rights reserved.
         </p>
       </div>
     </section>
