@@ -27,7 +27,7 @@ export default function Story() {
   return (
     <section
       ref={sectionRef}
-      className="relative flex flex-col items-center justify-center h-full w-full bg-white max-lg:min-h-screen max-lg:pt-32 lg:h-[200vh] lg:justify-start"
+      className="relative flex flex-col items-center justify-center h-full w-full bg-neutral-900 text-white max-lg:min-h-screen max-lg:pt-32 lg:h-[200vh] lg:justify-start"
     >
       <div
         ref={stickyRef}
@@ -39,9 +39,7 @@ export default function Story() {
             className="chapter-text relative z-2 pb-6 text-center lg:pb-8"
           >
             <h2 className="page-chapter inline-flex gap-2 font-mono text-sm uppercase">
-              <span className="chapter-index">
-                [{storyData.chapterIndex}]
-              </span>
+              <span className="chapter-index">[{storyData.chapterIndex}]</span>
               <span>{storyData.chapter}</span>
             </h2>
           </div>
@@ -67,6 +65,7 @@ export default function Story() {
                               style={{
                                 clipPath:
                                   "polygon(25% 0px, 100% 0px, 75% 100%, 0px 100%)",
+                                // "polygon(12.6% 100%, 87.4% 100%, 92.7% 98.2%, 96.1% 93.5%, 97.3% 87.2%, 95.7% 80.7%, 58.3% 7.6%, 54.6% 3.3%, 50% 1.9%, 45.4% 3.3%, 41.7% 7.6%, 4.3% 80.7%, 2.7% 87.2%, 3.9% 93.5%, 7.4% 98.2%)",
                               }}
                             >
                               <Image
@@ -112,20 +111,20 @@ export default function Story() {
           className="bottom-0 flex flex-col lg:sticky lg:ml-auto lg:w-1/2"
         >
           <div className="story-card pointer-events-auto relative flex w-78.75 flex-col p-4 max-2xl:aspect-3/4 lg:max-h-[55vh] lg:w-full 2xl:min-h-80">
-            <div className="text-lg">
+            <div className="text-lg text-[#ec4424]">
               <p>{storyData.description}</p>
             </div>
 
-            <div className="pt-7 text-base">
+            <div className="pt-4 text-base text-[#ec4424]">
               <p>{storyData.detail}</p>
             </div>
 
             <Link
               href={storyData.cta.href}
-              className="group mt-auto flex items-center gap-2 font-mono text-sm uppercase after:absolute after:inset-0"
+              className="group mt-auto flex items-center gap-2 font-mono text-sm uppercase after:absolute after:inset-0 text-white"
               aria-label={storyData.cta.label}
             >
-              <span className="h-[.6lh] w-3 -skew-x-20 bg-current transition-all duration-200 group-hover:w-7" />
+              <span className="h-[.6lh] w-3 -skew-x-20 bg-[#ec4424] transition-all duration-200 group-hover:w-7" />
               <span className="transition-transform duration-500 group-hover:translate-x-2">
                 {storyData.cta.label}
               </span>
